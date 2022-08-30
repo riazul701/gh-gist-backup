@@ -1,0 +1,5 @@
+Gist_Backups/*
+!Gist_Backups/.gitkeep
+gist-backup-list.txt
+gist-delete-list.txt
+gist-restore-list.txt
