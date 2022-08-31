@@ -1,6 +1,11 @@
 #!/bin/bash
 
 function gist_backup() {
+  if [ ! -d "Gist_Backups" ]
+  then
+      mkdir "Gist_Backups"
+  fi
+
   gh gist list --limit 1000000 > gist-backup-list.txt
   #gh gist list --limit 2 > gist-backup-list.txt
   total_gist=$(wc -l < "gist-backup-list.txt")
