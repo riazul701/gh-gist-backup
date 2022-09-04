@@ -33,7 +33,9 @@ gh gist-backup delete
 
 ## NOTE
 
-* Windows is Case-Sensitive OS and Linux (Ubuntu) OS is Case-Insensitive OS. If any gist contains two files named "abc.php" and "Abc.php", then only one file will be downloaded in Windows OS and both file will be downloaded in Linux (Ubuntu) OS. So it is recommended to use Linux (Ubuntu) OS for backing up gists.
+* Windows is Case-Insensitive OS and Linux (Ubuntu) OS is Case-Sensitive OS. If any gist contains two files named "abc.php" and "Abc.php", then only one file will be downloaded in Windows OS and both file will be downloaded in Linux (Ubuntu) OS. So it is recommended to use Linux (Ubuntu) OS for backing up gists.
+
+* If "Gist_Backups.zip" file contains two files named "abc.php" and "Abc.php" and we try to unzip the backup zip file in Windows OS, then one file will be replaced by another because Windows is Case-Insensitive OS. So it is recommended to use Linux (Ubuntu) OS for unzipping the backup zip file.
 
 ## Troubleshooting
 
