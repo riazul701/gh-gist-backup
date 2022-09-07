@@ -1,9 +1,9 @@
 #!/bin/bash
 
 function gist_backup() {
-  if [ ! -d "Gist_Backups" ]
+  if [ ! -d "Gist_Backup" ]
   then
-      mkdir "Gist_Backups"
+      mkdir "Gist_Backup"
   fi
 
   gh gist list --limit 1000000 > gist-backup-list.txt
@@ -19,7 +19,7 @@ function gist_backup() {
       description=$2
       type=$4  # secret/public
       unset IFS
-      clone_path="Gist_Backups/$description"
+      clone_path="Gist_Backup/$description"
 
       while [ -d "$clone_path ($type)" ]
       do
@@ -35,7 +35,7 @@ function gist_backup() {
 }
 
 function gist_restore() {
-  ls -d Gist_Backups/*/>gist-restore-list.txt
+  ls -d Gist_Backup/*/>gist-restore-list.txt
   total_gist=$(wc -l < "gist-restore-list.txt")
   gist_counter=1
 
